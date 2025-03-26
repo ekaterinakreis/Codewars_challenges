@@ -1,0 +1,12 @@
+# The main idea is to count all the occurring characters in a string. If you have a string like aba,
+# then the result should be {'a': 2, 'b': 1}.
+#
+# What if the string is empty? Then the result should be empty object literal, {}.
+
+def count(s):
+    mydict = dict((k, v) for k, v in {k: (s.count(k)) for k in s}.items())
+    return mydict
+
+# _________________________________
+def count(string):
+    return {i: string.count(i) for i in string}
